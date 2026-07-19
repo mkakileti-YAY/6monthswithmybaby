@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Months w LOML ❤️</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section id="title-screen">
+        <div class="title-box">
+            <p class="small-title">WORLD 1-1</p>
+            <h1>Our First 6 Months •ᴗ•</h1>
+            <p class="title-message">a little adventure through our favorite memories.</p>
+            <button id="start-button" type="button">PRESS START</button>
+        </div>
+    </section>
+
+    <main id="game">
+        <div id="sky" aria-hidden="true">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+
+        <div id="world"></div>
+
+        <img
+            id="mario"
+            src="./assets/images/mario.gif"
+            alt="Mario running"
+            draggable="false"
+        >
+
+        <div id="ground" aria-hidden="true">
+            <div class="grass"></div>
+        </div>
+
+        <div id="progress-display">
+            MEMORIES: <span id="memory-count">0</span>/<span id="memory-total">7</span>
+        </div>
+
+        <div id="controls-display">
+            <strong>HOW TO PLAY</strong>
+            <span>→ Run</span>
+            <span>← Back</span>
+            <span>↑ or Space: Jump</span>
+            <span>Hit each box!</span>
+        </div>
+    </main>
+    <section id="memory-modal" class="hidden" aria-hidden="true">
+        <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="memory-title">
+            <div class="modal-header">
+                <span id="modal-month">MONTH 0</span>
+                <span class="modal-heart">♥</span>
+            </div>
+
+            <div class="modal-content">
+                <div id="photo-placeholder" class="photo-placeholder">Add a photo later</div>
+                <img id="memory-photo" class="hidden" src="" alt="Relationship memory">
+
+                <div class="memory-writing">
+                    <h2 id="memory-title">Memory title</h2>
+                    <p id="memory-text">Memory text will appear here.</p>
+                    <div id="song-label" class="song-label hidden">
+                        <span>♪ <span id="song-name"></span></span>
+                        <button id="song-toggle-button" type="button">▶ PLAY SONG</button>
+                    </div>
+                </div>
+            </div>
+
+            <button id="continue-button" type="button">CONTINUE ▶</button>
+        </div>
+    </section>
+
+    <audio id="memory-audio"></audio>
+    <script src="./js/script.js"></script>
+</body>
+</html>
